@@ -1,0 +1,34 @@
+---------------WELCOME---------------
+$ create_parking_lot 2
+Created a parking lot with 2 slots
+$ park WB-01-1234 RED
+Allocated slot number: 1
+$ park WB-01-2345 BLACK
+Allocated slot number: 2
+$ status
+Slot No. Registration No. Colour
+   1       WB-01-1234  RED
+   2       WB-01-2345  BLACK
+$ leave 1
+Slot number 1 is free and now available to park
+$ status
+Slot No. Registration No. Colour
+   2       WB-01-2345  BLACK
+$ park WB-01-6788 WHITE
+Allocated slot number: 1
+$ status
+Slot No. Registration No. Colour
+   1       WB-01-6788  WHITE
+   2       WB-01-2345  BLACK
+$ slot_number_for_registration_number WB-01-6788
+1
+$ slot_number_for_registration_number WB-01-2345  
+2
+$ slot_numbers_for_cars_with_colour WHITE
+1
+$ slot_numbers_for_cars_with_colour BLACK
+2
+$ registration_numbers_for_cars_with_colour BLACK
+WB-01-2345 
+$ registration_numbers_for_cars_with_colour WHITE
+WB-01-6788 
